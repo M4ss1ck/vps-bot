@@ -6,27 +6,28 @@ const bot = new Bot(token);
 
 bot.command("start", (ctx) => ctx.reply("👀 Nothing here for you... "));
 
-bot.command("ls", (ctx) => {
-  const sc = shellCommand("ls");
-  sc.events
-    .on("pid", (pid) => {
-      console.log(`The pid of the command is ${pid}`);
-    })
-    .on("stdout", (stdout) => {
-      console.log(stdout.trim());
-    })
-    .on("stderr", (stderr) => {
-      console.warn(stderr.trim());
-    })
-    .on("error", (e) => {
-      console.error(e);
-    })
-    .on("exit", (exitStatus) => {
-      console.log(`Exit status: ${exitStatus}`);
-    });
-  ctx.reply("📁 Listing files...");
+bot.command("ls", async (ctx) => {
+  try {
+    const sc = shellCommand("ls");
+    await sc
+      .execute()
+      .then((success) => {
+        if (success === true) {
+          console.log(sc.stdout);
+          ctx.reply("📁 Listing files...");
+        } else {
+          console.error(sc.error);
+        }
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+  } catch (error) {
+    console.error(error);
+    ctx.reply(`<pre>${JSON.stringify(error)}</pre>`, { parse_mode: "HTML" });
+  }
 });
 
 bot.start();
-
+console.log("BOT INICIADO");
 bot.catch((err) => console.log(err));
