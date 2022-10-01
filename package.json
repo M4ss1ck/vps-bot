@@ -6,9 +6,8 @@
   },
   "dependencies": {
     "dotenv": "^16.0.1",
-    "grammy": "^1.9.0",
     "linux-shell-command": "^0.0.6",
-    "telegraf": "^4.8.5"
+    "telegraf": "^4.10.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",

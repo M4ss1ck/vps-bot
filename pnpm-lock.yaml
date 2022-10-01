@@ -3,17 +3,15 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': ^18.0.0
   dotenv: ^16.0.1
-  grammy: ^1.9.0
   linux-shell-command: ^0.0.6
-  telegraf: ^4.8.5
+  telegraf: ^4.10.0
   tsc-watch: ^5.0.3
   typescript: ^4.7.4
 
 dependencies:
   dotenv: 16.0.1
-  grammy: 1.9.0
   linux-shell-command: 0.0.6
-  telegraf: 4.8.5
+  telegraf: 4.10.0
 
 devDependencies:
   '@types/node': 18.0.0
@@ -21,10 +19,6 @@ devDependencies:
   typescript: 4.7.4
 
 packages:
-
-  /@grammyjs/types/2.8.1:
-    resolution: {integrity: sha512-cdeagnRnpahbwxyM4XOQR3EQwKnsmEsIktwRlQNyDz3IXI9YBvbRq2lDtufHxO4t6X07mm1+DiwjKEeYCec5bA==}
-    dev: false
 
   /@types/node/18.0.0:
     resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==}
@@ -108,19 +102,6 @@ packages:
     resolution: {integrity: sha512-twe20eF1OxVxp/ML/kq2p1uc6KvFK/+vs8WjEbeKmV2He22MKm7YF2ANIt+EOqhJ5L3K/SuuPhk0hWQDjOM23g==}
     dev: true
 
-  /grammy/1.9.0:
-    resolution: {integrity: sha512-aIUONCSbUtHVw+YuVB0kQEgoKXbYspihk2a0xFeWa7hk76PbRSBP/n3q3gHq+O4MHy6DsIjP3WrezsA1qyuQ4w==}
-    engines: {node: ^12.20.0 || >=14.13.1}
-    dependencies:
-      '@grammyjs/types': 2.8.1
-      abort-controller: 3.0.0
-      debug: 4.3.4
-      node-fetch: 2.6.7
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: false
-
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
@@ -133,12 +114,9 @@ packages:
     resolution: {integrity: sha512-CkYQrPYZfWnu/DAmVCpTSX/xHpKZ80eKh2lAkyA6AJTef6bW+6JpbQZN5rofum7da+SyN1bi5ctTm+lTfcCW3g==}
     dev: true
 
-  /minimist/1.2.6:
-    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
-    dev: false
-
-  /module-alias/2.2.2:
-    resolution: {integrity: sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==}
+  /mri/1.2.0:
+    resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
+    engines: {node: '>=4'}
     dev: false
 
   /ms/2.1.2:
@@ -232,20 +210,19 @@ packages:
       ansi-regex: 5.0.1
     dev: true
 
-  /telegraf/4.8.5:
-    resolution: {integrity: sha512-BTnXBvQ2sRnPCuDvMCvZhMfanJxycWNmAEd+23yBliKXddqt/fFWkj/2OQMD/L3YPD1c1elK5F4WEkJUW3khQQ==}
+  /telegraf/4.10.0:
+    resolution: {integrity: sha512-dOlkC2s+f29jXEYN/R20gGQQ/2BCLmRaGkMKCnSZsLB7+7QZKxROu7PWkAB/kKj9Eedt3UpfqAv6bNhmeL9XGA==}
     engines: {node: ^12.20.0 || >=14.13.1}
     hasBin: true
     dependencies:
       abort-controller: 3.0.0
       debug: 4.3.4
-      minimist: 1.2.6
-      module-alias: 2.2.2
+      mri: 1.2.0
       node-fetch: 2.6.7
       p-timeout: 4.1.0
       safe-compare: 1.1.4
       sandwich-stream: 2.0.2
-      typegram: 3.10.0
+      typegram: 3.12.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -274,8 +251,8 @@ packages:
       typescript: 4.7.4
     dev: true
 
-  /typegram/3.10.0:
-    resolution: {integrity: sha512-kma7ZF7SFRqcUCgo5sHg1MbPwc9/KYjVkbvrqIZK7oXfPdLBGz1s7wF9d7o4yjHp+AOGke8cyYGhI/+4xYYC4Q==}
+  /typegram/3.12.0:
+    resolution: {integrity: sha512-/VrU0sJv8BdOsBIpYT4w35C7dPg5YyKP6fLiYN9qYXRZ86TVIiw0ZypkzElTAfDVsJtJSluGAufUrcX7VRSIYQ==}
     dev: false
 
   /typescript/4.7.4:
