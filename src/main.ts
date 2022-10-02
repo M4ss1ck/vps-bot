@@ -57,11 +57,7 @@ bot.command("sh", async (ctx) => {
   }
 });
 
-bot.launch(process.env.WEBHOOK === 'ON' && process.env.DOMAIN ? {
-  webhook: {
-    domain: process.env.DOMAIN,
-  }
-} : {});
+bot.launch();
 console.log("BOT INICIADO");
 
 // Enable graceful stop
