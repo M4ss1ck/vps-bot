@@ -7,11 +7,11 @@
   "dependencies": {
     "dotenv": "^16.0.1",
     "linux-shell-command": "^0.0.6",
-    "telegraf": "^4.10.0"
+    "telegraf": "^4.10.0",
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "tsc-watch": "^5.0.3",
-    "typescript": "^4.7.4"
+    "tsc-watch": "^5.0.3"
   }
 }
